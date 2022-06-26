@@ -75,7 +75,8 @@ body{
     position: fixed;
     padding: 10px;
     box-sizing: border-box;
-    background-color: var(--light-accent-bg);
+    background: var(--light-accent-bg);
+    z-index: 1;
 
     .label{
         cursor: pointer;
@@ -100,6 +101,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
     gap: 10px;
     border-radius: 4px;
     width: 500px;
@@ -145,7 +147,27 @@ body{
         color: rgba(250,250,250,0.8);
         background: linear-gradient(180deg, #185ADB 0%, #1E4EAD 100%);
     }
+    &:active{
+        outline: 1px solid black;
+        outline-offset: 4px;
+    }
 }
+#randomizer{
+    input{
+        width: 40%;
+    }
+    input:first-child{
+        margin-right: 20px;
+    }
+}
+
+.input{
+    background: var(--tinted);
+    &:focus{
+        background: var(--dusty-white);
+    }
+}
+
 
 /* Layouts */
 
@@ -154,6 +176,16 @@ body{
     margin: auto;
     width: fit-content;
     grid-template-columns: 50% 50%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .label{
+        margin-right: 10px;
+    }
 }
 
 // mobile responsive
